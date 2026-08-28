@@ -4,7 +4,7 @@
   --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
   --font-heading: 'Montserrat', system-ui, 'Segoe UI', Roboto, sans-serif;
 
-  /* Navy — primary brand color, from the BrightCoat logo */
+  /* Navy — secondary brand accent, from the BrightCoat logo */
   --color-brand-50: #eef2fa;
   --color-brand-100: #d6e0f2;
   --color-brand-200: #adc2e6;
@@ -16,7 +16,7 @@
   --color-brand-800: #122a52;
   --color-brand-900: #0b1c38;
 
-  /* Gold — accent color, from the BrightCoat logo */
+  /* Gold — primary accent, from the BrightCoat logo */
   --color-gold-50: #fdf7e7;
   --color-gold-100: #faebc0;
   --color-gold-200: #f4d688;
@@ -27,6 +27,11 @@
   --color-gold-700: #895b13;
   --color-gold-800: #63420d;
   --color-gold-900: #402a08;
+
+  /* Surface — the site's main background tone: near-black, not pure white
+     or pure black, per client feedback */
+  --color-surface: #17181d;
+  --color-surface-alt: #1e1f25;
 
   --color-ink-50: #f8fafc;
   --color-ink-100: #f1f5f9;
@@ -47,8 +52,8 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
-  color: var(--color-ink-700);
-  background: #ffffff;
+  color: var(--color-ink-300);
+  background: var(--color-surface);
 }
 
 h1,

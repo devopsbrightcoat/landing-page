@@ -2,13 +2,13 @@ import { about } from '../content'
 
 export const About = () => {
   return (
-    <section id="about" className="bg-ink-50">
+    <section id="about" className="bg-surface-alt">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-24 md:grid-cols-2 md:items-center">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-brand-900 sm:text-4xl">{about.heading}</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{about.heading}</h2>
           <div className="mt-6 space-y-4">
             {about.paragraphs.map((paragraph, index) => (
-              <p key={index} className="text-base leading-relaxed text-ink-600">
+              <p key={index} className="text-base leading-relaxed text-ink-400">
                 {paragraph}
               </p>
             ))}
@@ -19,12 +19,12 @@ export const About = () => {
           {about.highlights.map((highlight) => (
             <div
               key={highlight}
-              className="flex items-center gap-3 rounded-xl bg-white p-5 shadow-sm ring-1 ring-ink-200"
+              className="flex items-center gap-3 rounded-xl bg-surface p-5 ring-1 ring-white/10"
             >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-900">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-800">
                 <span className="h-3 w-3 rounded-full bg-gold-500" aria-hidden="true" />
               </span>
-              <p className="text-sm font-semibold text-brand-900">{highlight}</p>
+              <p className="text-sm font-semibold text-white">{highlight}</p>
             </div>
           ))}
         </div>

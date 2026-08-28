@@ -2,14 +2,14 @@ import { footer, contact } from '../content'
 
 export const Footer = () => {
   return (
-    <footer className="bg-brand-900">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 py-12 text-center sm:flex-row sm:justify-between sm:text-left">
+    <footer className="bg-surface">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 border-t border-white/10 px-6 py-12 text-center sm:flex-row sm:justify-between sm:text-left">
         <div className="flex flex-col items-center gap-3 sm:items-start">
           <img src="/brightcoat-logo.png" alt="BrightCoat Painting & Remodeling" className="h-16 w-auto" />
-          <p className="max-w-xs text-sm text-brand-200">{footer.tagline}</p>
+          <p className="max-w-xs text-sm text-ink-400">{footer.tagline}</p>
         </div>
 
-        <div className="text-sm text-brand-200">
+        <div className="text-sm text-ink-400">
           <p>{contact.address}</p>
           <p className="mt-1">
             {contact.phone} · {contact.email}
@@ -17,8 +17,8 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-brand-800">
-        <p className="mx-auto max-w-6xl px-6 py-4 text-center text-xs text-brand-300">{footer.copyright}</p>
+      <div className="border-t border-white/10">
+        <p className="mx-auto max-w-6xl px-6 py-4 text-center text-xs text-ink-500">{footer.copyright}</p>
       </div>
     </footer>
   )

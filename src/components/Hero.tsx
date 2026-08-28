@@ -2,11 +2,12 @@ import { hero } from '../content'
 
 export const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-brand-900">
+    <section className="relative overflow-hidden bg-surface">
       <div
-        className="pointer-events-none absolute inset-0 opacity-20"
+        className="pointer-events-none absolute inset-0 opacity-25"
         style={{
-          backgroundImage: 'radial-gradient(circle at 20% 20%, var(--color-gold-500), transparent 45%)',
+          backgroundImage:
+            'radial-gradient(circle at 18% 20%, var(--color-gold-500), transparent 45%), radial-gradient(circle at 85% 80%, var(--color-brand-500), transparent 40%)',
         }}
         aria-hidden="true"
       />
@@ -20,7 +21,7 @@ export const Hero = () => {
           {hero.heading}
         </h1>
 
-        <p className="mt-6 max-w-2xl text-lg text-brand-100">{hero.subheading}</p>
+        <p className="mt-6 max-w-2xl text-lg text-ink-300">{hero.subheading}</p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <a
@@ -31,7 +32,7 @@ export const Hero = () => {
           </a>
           <a
             href={hero.secondaryCta.href}
-            className="rounded-full border border-brand-100/30 px-8 py-3.5 text-base font-semibold text-white transition hover:bg-white/10"
+            className="rounded-full border border-white/15 px-8 py-3.5 text-base font-semibold text-white transition hover:bg-white/10"
           >
             {hero.secondaryCta.label}
           </a>
