@@ -2,17 +2,31 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Montserrat', system-ui, 'Segoe UI', Roboto, sans-serif;
 
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
+  /* Navy — primary brand color, from the BrightCoat logo */
+  --color-brand-50: #eef2fa;
+  --color-brand-100: #d6e0f2;
+  --color-brand-200: #adc2e6;
+  --color-brand-300: #84a3d9;
+  --color-brand-400: #5c85cc;
+  --color-brand-500: #3d68b0;
+  --color-brand-600: #2a5090;
+  --color-brand-700: #1c3b70;
+  --color-brand-800: #122a52;
+  --color-brand-900: #0b1c38;
+
+  /* Gold — accent color, from the BrightCoat logo */
+  --color-gold-50: #fdf7e7;
+  --color-gold-100: #faebc0;
+  --color-gold-200: #f4d688;
+  --color-gold-300: #edbe57;
+  --color-gold-400: #e3a730;
+  --color-gold-500: #cf9122;
+  --color-gold-600: #ad7519;
+  --color-gold-700: #895b13;
+  --color-gold-800: #63420d;
+  --color-gold-900: #402a08;
 
   --color-ink-50: #f8fafc;
   --color-ink-100: #f1f5f9;
@@ -35,4 +49,10 @@ body {
   font-family: var(--font-sans);
   color: var(--color-ink-700);
   background: #ffffff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
 }

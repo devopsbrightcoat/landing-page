@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import { nav, site } from '../content'
+import { nav } from '../content'
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink-200 bg-white/80 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-lg font-semibold text-ink-900">
-          {site.name}
+    <header className="sticky top-0 z-50 border-b border-ink-200 bg-white/90 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+        <a href="#" className="flex items-center">
+          <img src="/brightcoat-logo.png" alt="BrightCoat Painting & Remodeling" className="h-14 w-auto" />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -16,7 +16,7 @@ export const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-ink-600 transition hover:text-brand-600"
+              className="text-sm font-medium text-brand-800 transition hover:text-gold-600"
             >
               {link.label}
             </a>
@@ -25,7 +25,7 @@ export const Navbar = () => {
 
         <a
           href={nav.ctaHref}
-          className="hidden rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700 md:inline-block"
+          className="hidden rounded-full bg-gold-500 px-5 py-2.5 text-sm font-semibold text-brand-900 transition hover:bg-gold-400 md:inline-block"
         >
           {nav.ctaLabel}
         </a>
@@ -33,15 +33,15 @@ export const Navbar = () => {
         <button
           type="button"
           onClick={() => setOpen((prev) => !prev)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-ink-700 md:hidden"
-          aria-label="Abrir menú"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-brand-800 md:hidden"
+          aria-label="Open menu"
           aria-expanded={open}
         >
-          <span className="sr-only">Menú</span>
+          <span className="sr-only">Menu</span>
           <div className="space-y-1.5">
-            <span className="block h-0.5 w-6 bg-ink-700" />
-            <span className="block h-0.5 w-6 bg-ink-700" />
-            <span className="block h-0.5 w-6 bg-ink-700" />
+            <span className="block h-0.5 w-6 bg-brand-800" />
+            <span className="block h-0.5 w-6 bg-brand-800" />
+            <span className="block h-0.5 w-6 bg-brand-800" />
           </div>
         </button>
       </div>
@@ -53,7 +53,7 @@ export const Navbar = () => {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="rounded-md px-2 py-2 text-sm font-medium text-ink-700 hover:bg-ink-50"
+              className="rounded-md px-2 py-2 text-sm font-medium text-brand-800 hover:bg-ink-50"
             >
               {link.label}
             </a>
@@ -61,7 +61,7 @@ export const Navbar = () => {
           <a
             href={nav.ctaHref}
             onClick={() => setOpen(false)}
-            className="mt-2 rounded-full bg-brand-600 px-5 py-2.5 text-center text-sm font-semibold text-white"
+            className="mt-2 rounded-full bg-gold-500 px-5 py-2.5 text-center text-sm font-semibold text-brand-900"
           >
             {nav.ctaLabel}
           </a>

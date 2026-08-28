@@ -1,120 +1,111 @@
 // ---------------------------------------------------------------------------
-// Contenido de la landing page.
-// Todo el texto e información editable vive aquí — no hace falta tocar los
-// componentes para actualizar copy, precios, testimonios, etc.
-// Reemplaza los valores de ejemplo (marcados con [PLACEHOLDER]) con la
-// información real del cliente.
+// Landing page content for BrightCoat Painting & Remodeling, LLC.
+// Everything editable lives here — update copy, services, or contact info
+// without touching the components.
 // ---------------------------------------------------------------------------
 
 export const site = {
-  name: '[PLACEHOLDER] Nombre de la Empresa',
-  tagline: 'Descripción corta de una línea sobre qué hace la empresa',
+  name: 'BrightCoat Painting & Remodeling',
+  tagline: 'Building Trust Through Quality & Professionalism',
 }
 
 export const nav = {
   links: [
-    { label: 'Servicios', href: '#servicios' },
-    { label: 'Nosotros', href: '#nosotros' },
-    { label: 'Testimonios', href: '#testimonios' },
-    { label: 'Contacto', href: '#contacto' },
+    { label: 'Services', href: '#services' },
+    { label: 'About', href: '#about' },
+    { label: 'Contact', href: '#contact' },
   ],
-  ctaLabel: 'Contáctanos',
-  ctaHref: '#contacto',
+  ctaLabel: 'Free Estimate',
+  ctaHref: '#contact',
 }
 
 export const hero = {
-  eyebrow: '[PLACEHOLDER] Frase de posicionamiento',
-  heading: 'El título principal que capta la atención del visitante',
+  eyebrow: 'Austin, TX — Residential & Multifamily',
+  heading: 'Professional Painting & Remodeling You Can Trust',
   subheading:
-    'Un párrafo breve que explica el valor que ofrece el producto o servicio y por qué el visitante debería seguir leyendo.',
-  primaryCta: { label: 'Empezar ahora', href: '#contacto' },
-  secondaryCta: { label: 'Conocer más', href: '#servicios' },
+    'BrightCoat Painting & Remodeling, LLC provides professional painting, cleaning, repair, and remodeling services throughout the Austin area. We specialize in reliable, high-quality services for apartment communities, property managers, and residential properties.',
+  primaryCta: { label: 'Request a Free Estimate', href: '#contact' },
+  secondaryCta: { label: 'Our Services', href: '#services' },
 }
 
 export const services = {
-  heading: 'Nuestros servicios',
-  subheading: 'Todo lo que necesitas, en un solo lugar.',
+  heading: 'Our Services',
+  subheading: 'From a single room to a full property turn, we handle it all.',
   items: [
     {
-      title: 'Servicio uno',
-      description: 'Descripción breve del primer servicio o característica clave que ofrece la empresa.',
+      title: 'Interior Painting',
+      description:
+        'Professional interior painting for apartments, residential properties, common areas, offices, and other spaces.',
     },
     {
-      title: 'Servicio dos',
-      description: 'Descripción breve del segundo servicio o característica clave que ofrece la empresa.',
+      title: 'Drywall Repair & Installation',
+      description: 'Drywall installation, patching, tape and float, texture matching, and repairs.',
     },
     {
-      title: 'Servicio tres',
-      description: 'Descripción breve del tercer servicio o característica clave que ofrece la empresa.',
+      title: 'Cleaning Services',
+      description:
+        'Apartment make-ready cleaning, full cleaning, heavy cleaning, touch-up cleaning, and common-area cleaning.',
     },
     {
-      title: 'Servicio cuatro',
-      description: 'Descripción breve del cuarto servicio o característica clave que ofrece la empresa.',
+      title: 'General Repairs',
+      description:
+        'Interior repairs including baseboards, trim, minor carpentry, wall repairs, and other property maintenance needs.',
     },
     {
-      title: 'Servicio cinco',
-      description: 'Descripción breve del quinto servicio o característica clave que ofrece la empresa.',
+      title: 'Remodeling',
+      description:
+        'Interior remodeling and restoration services, including kitchens, bathrooms, flooring-related repairs, cabinets, and other improvement projects.',
     },
     {
-      title: 'Servicio seis',
-      description: 'Descripción breve del sexto servicio o característica clave que ofrece la empresa.',
+      title: 'Cabinet & Trim Painting',
+      description: 'Professional preparation and painting of cabinets, doors, trim, and baseboards.',
+    },
+    {
+      title: 'Water Damage Build-Back & Repairs',
+      description:
+        'Interior reconstruction and build-back after water mitigation, including drywall, baseboards, texture, painting, and related repairs.',
     },
   ],
 }
 
 export const about = {
-  heading: 'Sobre nosotros',
+  heading: 'About BrightCoat',
   paragraphs: [
-    'Un párrafo contando la historia, misión o propuesta de valor de la empresa.',
-    'Un segundo párrafo opcional con más contexto o diferenciadores frente a la competencia.',
+    'BrightCoat Painting & Remodeling, LLC is an Austin-based company specializing in professional painting, make-ready services, cleaning, repairs, and remodeling.',
+    'We work closely with property managers and multifamily communities to provide dependable, efficient, and high-quality service. From apartment turns and full interior painting to drywall repairs, cleaning, and larger renovation projects, our goal is to make every project simple and reliable from start to finish.',
   ],
-  stats: [
-    { value: '00+', label: 'Clientes atendidos' },
-    { value: '00', label: 'Años de experiencia' },
-    { value: '00%', label: 'Satisfacción' },
-  ],
+  // Non-numeric trust highlights (no invented stats/years-in-business numbers)
+  highlights: ['Residential & Multifamily', 'Property Manager Preferred', 'Available 24/7'],
 }
 
+// [PENDING] Real client testimonials have not been provided yet.
+// The <Testimonials /> component is built and ready in
+// src/components/Testimonials.tsx, but is intentionally NOT rendered in
+// App.tsx until BrightCoat provides real reviews — never fill this with
+// placeholder/fake reviews.
 export const testimonials = {
-  heading: 'Lo que dicen nuestros clientes',
-  items: [
-    {
-      quote: 'Frase textual de un cliente satisfecho sobre su experiencia con el producto o servicio.',
-      name: 'Nombre Apellido',
-      role: 'Cargo, Empresa',
-    },
-    {
-      quote: 'Otra frase textual de un cliente satisfecho sobre su experiencia con el producto o servicio.',
-      name: 'Nombre Apellido',
-      role: 'Cargo, Empresa',
-    },
-    {
-      quote: 'Una tercera frase textual de un cliente satisfecho con el producto o servicio.',
-      name: 'Nombre Apellido',
-      role: 'Cargo, Empresa',
-    },
-  ],
+  heading: 'What Our Clients Say',
+  items: [] as { quote: string; name: string; role: string }[],
 }
 
 export const cta = {
-  heading: '¿Listo para empezar?',
-  subheading: 'Ponte en contacto con nosotros hoy mismo y da el siguiente paso.',
-  buttonLabel: 'Contáctanos',
-  buttonHref: '#contacto',
+  heading: 'Ready to Start Your Project?',
+  subheading: 'Contact BrightCoat today for a free estimate on your next painting, repair, or remodeling project.',
+  buttonLabel: 'Request a Free Estimate',
+  buttonHref: '#contact',
 }
 
 export const contact = {
-  heading: 'Hablemos',
-  subheading: 'Escríbenos y te responderemos lo antes posible.',
-  email: 'contacto@[placeholder].com',
-  phone: '+504 0000-0000',
-  address: 'Ciudad, Honduras',
+  heading: 'Get In Touch',
+  subheading: "Reach out and we'll get back to you as soon as possible.",
+  email: 'brightcoatpainting@gmail.com',
+  phone: '(512) 541-9987',
+  address: '3903 S Congress Ave #40006, Austin, TX 78704',
+  hours: 'Available 24/7',
+  owner: 'David Lopez — Owner / Project Manager',
 }
 
 export const footer = {
-  copyright: `© ${new Date().getFullYear()} [PLACEHOLDER] Nombre de la Empresa. Todos los derechos reservados.`,
-  links: [
-    { label: 'Privacidad', href: '#' },
-    { label: 'Términos', href: '#' },
-  ],
+  tagline: 'Building Trust Through Quality & Professionalism',
+  copyright: `© ${new Date().getFullYear()} BrightCoat Painting & Remodeling, LLC. All rights reserved.`,
 }
