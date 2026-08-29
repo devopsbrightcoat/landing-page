@@ -112,14 +112,15 @@ export const multifamily = {
   cta: { label: 'Talk to Us About Your Property', href: '#contact' },
 }
 
-// [PENDING] Real project photos have not been provided yet. Add before/after
-// pairs here once BrightCoat sends photos — each item expects `before` and
-// `after` image paths under /public/projects/. The section renders an honest
-// "coming soon" state while this stays empty; never fill it with stock or
-// placeholder photos presented as real BrightCoat work.
+// General project photos (reused from the real gallery images imported above)
+// power a clickable lightbox gallery below. Add real before/after pairs to
+// `items` once BrightCoat sends them — the section will switch to a
+// dedicated before/after layout once `items` is populated. Never fill
+// `items` with stock or placeholder photos presented as real BrightCoat work.
 export const projects = {
   heading: 'Recent Projects',
   subheading: 'A look at our painting, repair, and remodeling work across Austin.',
+  images: [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8],
   items: [] as { title: string; before: string; after: string }[],
 }
 
@@ -154,9 +155,6 @@ export const cta = {
   buttonHref: '#contact',
 }
 
-// [PENDING] Replace with BrightCoat's real Formspree endpoint: sign up free
-// at https://formspree.io, create a form, verify brightcoatpainting@gmail.com
-// as the recipient, then paste the endpoint URL below.
 export const contact = {
   heading: 'Get In Touch',
   subheading: "Reach out and we'll get back to you as soon as possible.",
@@ -164,7 +162,7 @@ export const contact = {
   phone: '(512) 541-9987',
   address: '3903 S Congress Ave #40006, Austin, TX 78704',
   hours: 'Available 24/7',
-  formspreeEndpoint: 'https://formspree.io/f/YOUR_FORM_ID',
+  formspreeEndpoint: 'https://formspree.io/f/mrpgbyey',
 }
 
 export const footer = {
