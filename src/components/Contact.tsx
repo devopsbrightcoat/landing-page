@@ -1,15 +1,32 @@
 import { type FormEvent, useState } from 'react'
 import { contact } from '../content'
 
-export const Contact = () => {
-  const [submitted, setSubmitted] = useState(false)
+type Status = 'idle' | 'submitting' | 'success' | 'error'
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+export const Contact = () => {
+  const [status, setStatus] = useState<Status>('idle')
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    // [PENDING] Wire this up to a real submission target before launch
-    // (e.g. Formspree, EmailJS, or a custom API endpoint that emails
-    // brightcoatpainting@gmail.com).
-    setSubmitted(true)
+    const form = event.currentTarget
+    setStatus('submitting')
+
+    try {
+      const response = await fetch(contact.formspreeEndpoint, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -36,20 +53,20 @@ export const Contact = () => {
               <dt className="font-semibold text-white">Hours:</dt>
               <dd className="text-ink-400">{contact.hours}</dd>
             </div>
-            <div className="flex gap-2">
-              <dt className="font-semibold text-white">Contact:</dt>
-              <dd className="text-ink-400">{contact.owner}</dd>
-            </div>
           </dl>
         </div>
 
         <form onSubmit={handleSubmit} className="rounded-2xl bg-surface p-6 ring-1 ring-white/10">
-          {submitted ? (
+          {status === 'success' ? (
             <p className="text-center text-sm font-medium text-gold-400">
               Thank you! We've received your message and will be in touch soon.
             </p>
           ) : (
             <div className="space-y-4">
+              {/* Honeypot spam trap — real visitors never see or fill this */}
+              <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" />
+              <input type="hidden" name="_subject" value="New message from the BrightCoat website" />
+
               <div>
                 <label htmlFor="name" className="mb-1 block text-sm font-medium text-ink-300">
                   Name
@@ -89,11 +106,19 @@ export const Contact = () => {
                 />
               </div>
 
+              {status === 'error' && (
+                <p className="text-sm text-red-400">
+                  Something went wrong sending your message. Please try again, or email us directly at{' '}
+                  {contact.email}.
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-brand-900 transition hover:bg-gold-400"
+                disabled={status === 'submitting'}
+                className="w-full rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-brand-900 transition hover:bg-gold-400 disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Send Message
+                {status === 'submitting' ? 'Sending…' : 'Send Message'}
               </button>
             </div>
           )}

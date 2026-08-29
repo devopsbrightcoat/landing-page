@@ -80,23 +80,49 @@ Cada `git push` a `main` genera un nuevo deploy de producción automáticamente.
 En el proyecto dentro de Vercel: **Settings → Domains** → agrega el dominio
 del cliente y sigue las instrucciones para apuntar el DNS.
 
+## Activar el envío de correo del formulario de contacto (Formspree)
+
+El formulario de "Get In Touch" ya está conectado por código a Formspree —
+solo falta el endpoint real. Pasos:
+
+1. Entra a [formspree.io](https://formspree.io) y crea una cuenta gratis
+   (hasta 50 envíos/mes).
+2. Crea un nuevo formulario y pon `brightcoatpainting@gmail.com` como
+   correo de destino — Formspree manda un correo de verificación a esa
+   bandeja, hay que confirmarlo ahí.
+3. Copia el endpoint que te dan (algo como
+   `https://formspree.io/f/xxxxxxxx`).
+4. Pégalo en `src/content.ts`, reemplazando
+   `formspreeEndpoint: 'https://formspree.io/f/YOUR_FORM_ID'` con el real.
+5. Prueba el formulario en `npm run dev` o en el sitio ya desplegado — el
+   mensaje debe llegar a brightcoatpainting@gmail.com.
+
+Ya tiene honeypot anti-spam (`_gotcha`) y un asunto fijo (`_subject`)
+incluidos en el formulario.
+
 ## Pendiente antes de entregar al cliente
 
-- [ ] **Testimonios**: `Testimonials.tsx` ya está construido pero no se
-      renderiza en `App.tsx` — no hay reseñas reales todavía. Cuando el
-      cliente las envíe, agrégalas a `testimonials.items` en `content.ts`
-      y vuelve a importar/renderizar `<Testimonials />` en `App.tsx`.
-- [ ] **Fotos reales**: el cliente mencionó que enviará fotos de proyectos
-      (antes/después, trabajo en progreso, equipo). Falta una sección de
-      galería/portafolio — actualmente el Hero no tiene imagen de fondo.
-- [ ] **Instagram**: pendiente de que el cliente lo confirme — no hay
-      enlace a redes sociales todavía.
-- [ ] **Formulario de contacto**: actualmente solo simula el envío (no está
-      conectado a nada real). Ver comentario `[PENDING]` en
-      `src/components/Contact.tsx` — opciones simples: Formspree, EmailJS,
-      o un endpoint propio que envíe a brightcoatpainting@gmail.com.
-- [ ] **Headline alternativo** para el segmento multifamiliar/property
-      management — el cliente dejó este campo pendiente en su brief.
-- [ ] **Alcance/secciones técnicas** — el cliente marcó las secciones 5 y 6
-      de su brief ("Technical Requirements" y "Website Scope & Sections")
-      como pendientes de discusión.
+- [ ] **Fotos de proyectos (Before & After)**: la sección "Recent Projects"
+      (`src/components/Projects.tsx`) ya está construida y muestra un estado
+      "coming soon" honesto mientras `projects.items` esté vacío en
+      `content.ts`. Cuando el cliente mande fotos reales, agrégalas a
+      `public/projects/` y llena `projects.items` con los pares before/after.
+- [ ] **Fotos para "See Our Work in Action"** (`src/components/WorkGallery.tsx`,
+      la franja con fotos corriendo de fondo justo debajo del Hero): mientras
+      `gallery.images` esté vacío en `content.ts`, muestra tiles placeholder
+      ("Photo coming soon"). Agrega las rutas de las fotos reales (bajo
+      `public/gallery/`) en ese arreglo para reemplazarlos — no hace falta
+      que sean fotos before/after, sirven fotos generales del trabajo/equipo.
+- [ ] **Reviews de Google**: la sección "What Our Clients Say"
+      (`src/components/Reviews.tsx`) también está lista con estado
+      "coming soon". Falta: (1) el link real al perfil de Google Business de
+      BrightCoat (`reviews.googleUrl` en `content.ts`, ahora es `'#'`), y
+      (2) el texto real de las reviews que el cliente quiera destacar — NUNCA
+      inventar reviews ni nombres de clientes.
+- [ ] **Formulario de contacto**: el código ya envía vía Formspree — solo
+      falta pegar el endpoint real (ver sección "Activar el envío de correo"
+      más arriba).
+- [ ] **Instagram**: pendiente de que el cliente lo confirme.
+- [ ] **Alcance/secciones técnicas**: el cliente marcó "Technical
+      Requirements" y parte del "Website Scope" como pendientes de discusión
+      en su brief original.
