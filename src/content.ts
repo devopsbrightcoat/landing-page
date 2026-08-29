@@ -16,6 +16,7 @@ import gallery8 from './assets/gallery/gallery-8.jpeg'
 export const site = {
   name: 'BrightCoat Painting & Remodeling',
   tagline: 'Building Trust Through Quality & Professionalism',
+  serviceArea: 'Serving Austin & Surrounding Areas',
 }
 
 export const nav = {
@@ -124,15 +125,37 @@ export const projects = {
   items: [] as { title: string; before: string; after: string }[],
 }
 
-// [PENDING] Real client reviews have not been provided yet. Add them here
-// once BrightCoat shares the reviews they want featured (text, author,
-// rating), and replace googleUrl with their real Google Business Profile
-// link. Never invent reviews or reviewer names.
 export const reviews = {
   heading: 'What Our Clients Say',
   subheading: 'Reviews from real BrightCoat clients on Google.',
-  googleUrl: '#',
-  items: [] as { quote: string; author: string; rating: number }[],
+  googleUrl:
+    'https://www.google.com/maps/place/BrightCoat+Painting+%26+Remodeling,+LLC./@31.3922935,-97.5905195,8z/data=!4m16!1m9!3m8!1s0x456460d034ff0541:0x9d126bc61b77d514!2sBrightCoat+Painting+%26+Remodeling,+LLC.!8m2!3d31.3922934!4d-97.5905195!9m1!1b1!16s%2Fg%2F11vpykpkp5!3m5!1s0x456460d034ff0541:0x9d126bc61b77d514!8m2!3d31.3922934!4d-97.5905195!16s%2Fg%2F11vpykpkp5!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D',
+  items: [
+    {
+      quote:
+        "David and his team were responsive, meticulous, and kept working until the product was what we wanted and a standard he was happy with! I could not recommend him more!",
+      author: 'Christine Kaskow',
+      rating: 5,
+    },
+    {
+      quote:
+        "I've worked with David from Bright Coat Painting for over two years now. He services the property I manage on a daily basis. David has gone above and beyond to ensure the quality of work provided is top tier at all times. He responds to all emergencies very quickly and handles large build back jobs like a pro. If there's ever an issue with the quality of work, he comes back the next day, if not the same day. His attention to detail and work ethic is truly remarkable. I'll always recommend this company to anyone in need of a reliable/trustworthy painter and remodeler. Thank you for all that you do David!!",
+      author: 'Cristian Byrd',
+      rating: 5,
+    },
+    {
+      quote:
+        "David and his team really pay attention to detail and I cannot get these apartments up to my standards without his quality of work! Can't recommend him enough!",
+      author: 'Renona Wells',
+      rating: 5,
+    },
+    {
+      quote:
+        'Bright Coat is a wonderful company to work with. David and his team are reliable and provide exceptional quality service. So happy to have them as our number one vendor.',
+      author: 'B M',
+      rating: 5,
+    },
+  ],
 }
 
 export const about = {

@@ -17,7 +17,7 @@ export const Reviews = () => {
             </p>
           </div>
         ) : (
-          <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {reviews.items.map((review) => (
               <figure key={review.author} className="rounded-2xl border border-white/10 bg-surface p-6">
                 <div className="flex gap-0.5" aria-hidden="true">
