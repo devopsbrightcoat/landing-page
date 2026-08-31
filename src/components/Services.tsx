@@ -9,7 +9,6 @@ export const Services = () => {
           <p className="mt-4 text-lg text-ink-400">{services.subheading}</p>
         </div>
 
-        {/* Painting — primary/featured service */}
         <div className="mt-16 rounded-3xl border border-gold-500/30 bg-gradient-to-br from-brand-900 to-surface-alt p-8 sm:p-10">
           <span className="inline-flex items-center rounded-full bg-gold-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gold-300">
             {services.primary.badge}
@@ -26,7 +25,6 @@ export const Services = () => {
           </ul>
         </div>
 
-        {/* Additional services */}
         <h3 className="mt-16 text-center text-sm font-semibold uppercase tracking-wide text-ink-400">
           Additional Services
         </h3>

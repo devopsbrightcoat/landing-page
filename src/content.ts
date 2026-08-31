@@ -7,12 +7,6 @@ import gallery6 from './assets/gallery/gallery-6.jpeg'
 import gallery7 from './assets/gallery/gallery-7.jpeg'
 import gallery8 from './assets/gallery/gallery-8.jpeg'
 
-// ---------------------------------------------------------------------------
-// Landing page content for BrightCoat Painting & Remodeling, LLC.
-// Everything editable lives here — update copy, services, or contact info
-// without touching the components.
-// ---------------------------------------------------------------------------
-
 export const site = {
   name: 'BrightCoat Painting & Remodeling',
   tagline: 'Building Trust Through Quality & Professionalism',
@@ -113,11 +107,7 @@ export const multifamily = {
   cta: { label: 'Talk to Us About Your Property', href: '#contact' },
 }
 
-// General project photos (reused from the real gallery images imported above)
-// power a clickable lightbox gallery below. Add real before/after pairs to
-// `items` once BrightCoat sends them — the section will switch to a
-// dedicated before/after layout once `items` is populated. Never fill
-// `items` with stock or placeholder photos presented as real BrightCoat work.
+
 export const projects = {
   heading: 'Recent Projects',
   subheading: 'A look at our painting, repair, and remodeling work across Austin.',
@@ -167,9 +157,7 @@ export const about = {
     "That trust opened new doors. Project by project, relationship by relationship, BrightCoat has grown into a name property managers across Austin's multifamily industry recognize and rely on. Our goal was never simply to compete — it was to earn our place through the quality of our work and the relationships we build.",
     "As we continue to grow, the principles that got us here haven't changed: be responsible, keep our word, communicate openly, and deliver work we're proud to stand behind.",
   ],
-  // Client's own closing line — keep verbatim, do not paraphrase.
   motto: 'We started with an opportunity. We grew through trust. And we came to stay.',
-  // Non-numeric trust highlights (no invented stats/years-in-business numbers)
   highlights: ['Residential & Multifamily', 'Property Manager Preferred', 'Available 24/7'],
 }
 

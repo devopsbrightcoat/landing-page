@@ -5,7 +5,6 @@ const PLACEHOLDER_COUNT = 8
 export const WorkGallery = () => {
   const hasImages = gallery.images.length > 0
   const items: (string | undefined)[] = hasImages ? gallery.images : Array.from({ length: PLACEHOLDER_COUNT })
-  // Duplicate the strip so the CSS animation can loop seamlessly.
   const track = [...items, ...items]
 
   return (
