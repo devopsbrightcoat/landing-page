@@ -167,6 +167,8 @@ export const about = {
     "That trust opened new doors. Project by project, relationship by relationship, BrightCoat has grown into a name property managers across Austin's multifamily industry recognize and rely on. Our goal was never simply to compete — it was to earn our place through the quality of our work and the relationships we build.",
     "As we continue to grow, the principles that got us here haven't changed: be responsible, keep our word, communicate openly, and deliver work we're proud to stand behind.",
   ],
+  // Client's own closing line — keep verbatim, do not paraphrase.
+  motto: 'We started with an opportunity. We grew through trust. And we came to stay.',
   // Non-numeric trust highlights (no invented stats/years-in-business numbers)
   highlights: ['Residential & Multifamily', 'Property Manager Preferred', 'Available 24/7'],
 }

@@ -14,6 +14,10 @@ export const About = () => {
               </p>
             ))}
           </div>
+
+          <p className="mt-6 border-l-2 border-gold-500 pl-4 text-lg font-semibold italic text-white">
+            {about.motto}
+          </p>
         </div>
 
         <div className="flex flex-col gap-4">
