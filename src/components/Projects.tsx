@@ -41,8 +41,8 @@ export const Projects = () => {
             {projects.items.map((project) => (
               <div key={project.title} className="overflow-hidden rounded-2xl border border-white/10 bg-surface-alt">
                 <div className="grid grid-cols-2">
-                  <img src={project.before} alt={`${project.title} — before`} className="h-40 w-full object-cover" />
-                  <img src={project.after} alt={`${project.title} — after`} className="h-40 w-full object-cover" />
+                  <img src={project.before} alt={`${project.title}, before`} className="h-40 w-full object-cover" />
+                  <img src={project.after} alt={`${project.title}, after`} className="h-40 w-full object-cover" />
                 </div>
                 <p className="p-4 text-sm font-semibold text-white">{project.title}</p>
               </div>

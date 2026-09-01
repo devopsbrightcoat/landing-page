@@ -44,12 +44,12 @@ export const gallery = {
 
 export const services = {
   heading: 'Our Services',
-  subheading: 'Painting is our specialty — with cleaning and repairs available for every project.',
+  subheading: 'Painting is our specialty, with cleaning and repairs available for every project.',
   primary: {
     badge: 'Our Specialty',
     title: 'Interior Painting',
     description:
-      'Professional interior painting for apartments, residential properties, common areas, offices, and other spaces — the service BrightCoat is built around.',
+      'Professional interior painting for apartments, residential properties, common areas, offices, and other spaces, the service BrightCoat is built around.',
     bullets: [
       'Apartment & multifamily interiors',
       'Residential interior painting',
@@ -83,7 +83,7 @@ export const multifamily = {
     {
       title: 'Apartment Turns',
       description:
-        'Fast, reliable turnaround between tenants — painting, repairs, and cleaning coordinated so units are ready on schedule.',
+        'Fast, reliable turnaround between tenants, painting, repairs, and cleaning coordinated so units are ready on schedule.',
     },
     {
       title: 'Painting',
@@ -152,9 +152,9 @@ export const about = {
   heading: 'About BrightCoat',
   subheading: 'Built on Trust. Defined by Quality.',
   paragraphs: [
-    'BrightCoat Painting & Remodeling began with a single opportunity — and a clear vision: build a company where quality, reliability, and trust come before everything else.',
+    'BrightCoat Painting & Remodeling began with a single opportunity, and a clear vision: build a company where quality, reliability, and trust come before everything else.',
     'That journey started with smaller projects across Austin, where every job was a chance to prove ourselves. By showing up when we said we would, finishing on time, communicating clearly, and delivering consistent quality, we began earning the trust of our clients and the property managers we work with.',
-    "That trust opened new doors. Project by project, relationship by relationship, BrightCoat has grown into a name property managers across Austin's multifamily industry recognize and rely on. Our goal was never simply to compete — it was to earn our place through the quality of our work and the relationships we build.",
+    "That trust opened new doors. Project by project, relationship by relationship, BrightCoat has grown into a name property managers across Austin's multifamily industry recognize and rely on. Our goal was never simply to compete, it was to earn our place through the quality of our work and the relationships we build.",
     "As we continue to grow, the principles that got us here haven't changed: be responsible, keep our word, communicate openly, and deliver work we're proud to stand behind.",
   ],
   motto: 'We started with an opportunity. We grew through trust. And we came to stay.',
